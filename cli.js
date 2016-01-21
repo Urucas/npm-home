@@ -38,7 +38,10 @@ function prompt(pkg, dependencies, devDependencies) {
 
 readPkgUp().then(result => {
 	if(cli.flags.l || cli.flags.list) {
-		prompt(result.pkg.name, result.pkg.dependencies || {}, result.pkg.devDependencies || {})
+		prompt(result.pkg.name,
+			   result.pkg.dependencies || {},
+			   result.pkg.devDependencies || {}
+		)
 	}else
 		open(result.pkg.name)
 });
