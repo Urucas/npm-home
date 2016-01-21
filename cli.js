@@ -26,7 +26,7 @@ function prompt(pkg, dependencies, devDependencies) {
 	for(var key in dependencies) pkgs.push(key)
 	for(var key in devDependencies) pkgs.push(key)
 	inquirer.prompt({
-		type: 'checkbox',
+		type: 'list',
 		name: 'pkg',
 		message: 'Choice a package',
 		choices: pkgs,
